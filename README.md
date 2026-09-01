@@ -2,6 +2,12 @@
 
 Hands-on laboratory materials for CYBR 442/552.
 
+## Start Here
+
+[Oracle VirtualBox Shared Folder Setup](virtualbox_shared_folder_setup/README.md)
+
+This setup package includes a Windows PowerShell automation, an Ubuntu setup script, annotated reference screens, verification steps, and troubleshooting guidance.
+
 ## Lab 1
 
 [Environment Variables and Set-UID Programs](01_envvars_setuid/README.md)
