@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460">
+ <rect width="1200" height="100%" rx="18" fill="#111827"/>
+ <rect width="1200" height="64" rx="18" fill="#1F2937"/>
+ <circle cx="32" cy="32" r="9" fill="#F87171"/><circle cx="60" cy="32" r="9" fill="#FBBF24"/><circle cx="88" cy="32" r="9" fill="#34D399"/>
+ <text x="120" y="40" font-family="Arial" font-size="22" fill="#E5E7EB">GDB investigation — example output</text>
+ <style>.cmd{font:700 22px 'DejaVu Sans Mono',monospace;fill:#60A5FA}.out{font:20px 'DejaVu Sans Mono',monospace;fill:#E5E7EB}</style>
+ <text x="34" y="112" class="cmd">$ gdb ./vulnerable</text>
+<text x="34" y="143" class="cmd">(gdb) break copy_message</text>
+<text x="34" y="174" class="out">Breakpoint 1 at copy_message</text>
+<text x="34" y="205" class="cmd">(gdb) run AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</text>
+<text x="34" y="236" class="out">Breakpoint 1, copy_message (...) at overflow_demo.c</text>
+<text x="34" y="267" class="cmd">(gdb) info frame</text>
+<text x="34" y="298" class="out">Stack level 0, frame at 0x...</text>
+<text x="34" y="329" class="cmd">(gdb) backtrace</text>
+<text x="34" y="360" class="out">#0 copy_message (...)</text>
+<text x="34" y="391" class="out">#1 main (...)</text>
+ <text x="34" y="440" font-family="Arial" font-size="17" fill="#9CA3AF">Your architecture, paths, addresses, and messages may differ.</text>
+</svg>
