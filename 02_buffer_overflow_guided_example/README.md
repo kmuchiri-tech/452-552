@@ -149,6 +149,40 @@ The protected build places a canary near control data. A changed canary signals 
 make clean
 ```
 
+## Visual walkthrough
+
+These images show the expected pattern. Your architecture, paths, memory addresses, and exact messages may differ.
+
+### 1. Verify the Linux VM
+
+![Example terminal showing architecture and required tools](images/01_environment_check.svg)
+
+### 2. Compile the vulnerable and protected versions
+
+![Example terminal showing successful compilation](images/02_build_success.svg)
+
+### 3. Establish a normal-input baseline
+
+![Example terminal showing normal program execution](images/03_normal_input.svg)
+
+### 4. Compare overflow behavior
+
+![Example terminal comparing vulnerable and protected builds](images/04_overflow_comparison.svg)
+
+### 5. Inspect the stack frame in GDB
+
+![Example terminal showing the GDB checkpoint](images/05_gdb_checkpoint.svg)
+
+### What to notice
+
+| Screenshot | Evidence to explain |
+| --- | --- |
+| Environment | Commands run inside Linux, with the correct architecture and tools |
+| Build | Compiler flags create separate vulnerable and protected programs |
+| Normal input | Five characters fit inside the 24-byte buffer |
+| Overflow | The same 80-byte input produces different behavior across builds |
+| GDB | The debugger identifies the active function and stack frame |
+
 ## What this example does not answer
 
 The SEED assignment still requires students to determine their own architecture-specific values, complete the required SEED tasks, explain exploit decisions, test countermeasures, and submit original screenshots. Memory addresses often differ across environments.
