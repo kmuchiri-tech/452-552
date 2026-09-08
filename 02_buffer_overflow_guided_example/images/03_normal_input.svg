@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="274" viewBox="0 0 1200 274">
+ <rect width="1200" height="100%" rx="18" fill="#111827"/>
+ <rect width="1200" height="64" rx="18" fill="#1F2937"/>
+ <circle cx="32" cy="32" r="9" fill="#F87171"/><circle cx="60" cy="32" r="9" fill="#FBBF24"/><circle cx="88" cy="32" r="9" fill="#34D399"/>
+ <text x="120" y="40" font-family="Arial" font-size="22" fill="#E5E7EB">Normal input — example output</text>
+ <style>.cmd{font:700 22px 'DejaVu Sans Mono',monospace;fill:#60A5FA}.out{font:20px 'DejaVu Sans Mono',monospace;fill:#E5E7EB}</style>
+ <text x="34" y="112" class="cmd">$ ./vulnerable HELLO</text>
+<text x="34" y="143" class="out">Input length: 5 bytes</text>
+<text x="34" y="174" class="out">Stored message: HELLO</text>
+<text x="34" y="205" class="out">Program returned normally.</text>
+ <text x="34" y="254" font-family="Arial" font-size="17" fill="#9CA3AF">Your architecture, paths, addresses, and messages may differ.</text>
+</svg>
